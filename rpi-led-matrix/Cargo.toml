@@ -1,7 +1,7 @@
 [package]
 name = "pi-led-matrix"
 description = "Bindings for Hzeller's RPi-RGB-Led-Matrix"
-version = "0.5.1"
+version = "0.5.2"
 authors = [
     "Vincent Pasquier <vincentpasquier@posteo.net>",
     "Tyler Holmes <tyler@holmesengineering.com>",
