@@ -14,8 +14,10 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      release_created: ${{ steps.release.outputs.release_created }}
-      tag_name: ${{ steps.release.outputs.tag_name }}
+      rpi-led-matrix--release_created: ${{ steps.release.outputs.rpi-led-matrix--release_created }}
+      rpi-led-matrix--tag_name: ${{ steps.release.outputs.rpi-led-matrix--release_created }}
+      rpi-led-matrix-sys--release_created: ${{ steps.release.outputs.rpi-led-matrix-sys--release_created }}
+      rpi-led-matrix-sys--tag_name: ${{ steps.release.outputs.rpi-led-matrix-sys--tag_name }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -25,33 +27,46 @@ jobs:
 
       - name: Show outputs
         if: ${{ steps.release.outputs }}
+        continue-on-error: true
         run: |
           echo "${{ toJson(steps.release.outputs) }}"
 
-  publish-crates:
+  publish-rpi-led-matrix-sys:
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ needs.release-please.outputs.release_created == 'true' }}
+    if: ${{ needs.release-please.outputs.rpi-led-matrix-sys--release_created == 'true' }}
     permissions:
       contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ needs.release-please.outputs.tag_name }}
+          ref: ${{ needs.release-please.outputs.rpi-led-matrix-sys--tag_name }}
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
-      - name: Publish rpi-led-matrix-sys
+      - name: Publish rpi-led-matrix-sys crate
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish --locked -p rpi-led-matrix-sys --token "$CARGO_REGISTRY_TOKEN"
 
-      - name: Wait for crates.io index update
-        run: sleep 30
+  publish-rpi-led-matrix:
+    runs-on: ubuntu-latest
+    needs: release-please
+    if: ${{ needs.release-please.outputs.rpi-led-matrix--release_created == 'true' }}
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release-please.outputs.rpi-led-matrix--tag_name }}
 
-      - name: Publish rpi-led-matrix
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Publish rpi-led-matrix crate
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
         run: cargo publish --locked -p rpi-led-matrix --token "$CARGO_REGISTRY_TOKEN"
