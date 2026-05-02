@@ -12,7 +12,7 @@ use embedded_graphics_core::{
 /// The Rust handle for the RGB matrix.
 ///
 /// ```
-/// use rpi_led_matrix::{LedMatrix, LedColor};
+/// use pi_led_matrix::{LedMatrix, LedColor};
 /// let matrix = LedMatrix::new(None, None).unwrap();
 /// ```
 pub struct LedMatrix {
@@ -24,7 +24,7 @@ impl LedMatrix {
     /// Creates the rust handle for the RGB matrix, given the optional options.
     ///
     /// ```
-    /// use rpi_led_matrix::{LedMatrix, LedColor, LedMatrixOptions};
+    /// use pi_led_matrix::{LedMatrix, LedColor, LedMatrixOptions};
     /// let mut options = LedMatrixOptions::new();
     /// options.set_hardware_mapping("adafruit-hat-pwm");
     /// let matrix = LedMatrix::new(Some(options), None).unwrap();
@@ -76,7 +76,7 @@ impl LedMatrix {
     /// Cleanly swaps the canvas on v-sync, returning the off-screen canvas for updating.
     ///
     /// ```
-    /// use rpi_led_matrix::{LedMatrix, LedColor};
+    /// use pi_led_matrix::{LedMatrix, LedColor};
     /// let matrix = LedMatrix::new(None, None).unwrap();
     /// let mut canvas = matrix.offscreen_canvas();
     /// let mut color = LedColor { red: 0, green: 0, blue: 0 };

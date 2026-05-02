@@ -7,7 +7,7 @@ use embedded_graphics::{
     primitives::{Circle, PrimitiveStyle, Rectangle, Triangle},
     text::Text,
 };
-use rpi_led_matrix::{args, LedMatrix};
+use pi_led_matrix::{args, LedMatrix};
 
 const DELAY: std::time::Duration = std::time::Duration::from_secs(5);
 

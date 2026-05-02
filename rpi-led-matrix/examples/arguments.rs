@@ -1,6 +1,6 @@
 /// Extremely simple use of arguments to create matrix options
 use clap::{crate_version, App};
-use rpi_led_matrix::args;
+use pi_led_matrix::args;
 
 fn main() {
     let app = args::add_matrix_args(

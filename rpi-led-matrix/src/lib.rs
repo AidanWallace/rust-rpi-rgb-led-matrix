@@ -3,7 +3,7 @@
 //! # Example Usage
 //!
 //! ```
-//! use rpi_led_matrix::{LedMatrix, LedColor};
+//! use pi_led_matrix::{LedMatrix, LedColor};
 //! let matrix = LedMatrix::new(None, None).unwrap();
 //! let mut canvas = matrix.offscreen_canvas();
 //! for red in (0..255).step_by(16) {
@@ -31,11 +31,11 @@
 //!
 //! ## `c-stubs`
 //!
-//! Passthrough argument to [`rpi-led-matrix-sys`](rpi_led_matrix_sys). See their documentation for more info.
+//! Passthrough argument to [`pi-led-matrix-sys`](pi_led_matrix_sys). See their documentation for more info.
 //!
 //! ## `stdcpp-static-link`
 //!
-//! Passthrough argument to [`rpi-led-matrix-sys`](rpi_led_matrix_sys). See their documentation for more info.
+//! Passthrough argument to [`pi-led-matrix-sys`](pi_led_matrix_sys). See their documentation for more info.
 extern crate libc;
 
 #[cfg(feature = "args")]
@@ -53,7 +53,7 @@ mod matrix;
 mod options;
 
 // import all of the C FFI functions
-pub(crate) use rpi_led_matrix_sys as ffi;
+pub(crate) use pi_led_matrix_sys as ffi;
 
 // re-export objects to the root
 #[doc(inline)]

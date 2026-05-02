@@ -1,4 +1,4 @@
-//! Build script for `rpi-led-matrix-sys`
+//! Build script for `pi-led-matrix-sys`
 //!
 //! This build script:
 //! 0. checks if we're on a raspberry pi to make sure compilation has a chance of success
@@ -25,7 +25,7 @@ fn main() {
     // 0. To guess at if we're targetting the right platform, look for linux as the system & arm as the architecture
     let target = std::env::var("TARGET").unwrap();
     if !(target.contains("arm") || target.contains("aarch")) || !target.contains("linux") {
-        eprintln!("rpi-led-matrix-sys detected you're likely not compiling for a raspberry pi");
+        eprintln!("pi-led-matrix-sys detected you're likely not compiling for a raspberry pi");
         std::process::exit(-1);
     }
 

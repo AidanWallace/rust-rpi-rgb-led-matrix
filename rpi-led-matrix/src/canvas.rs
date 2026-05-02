@@ -7,7 +7,7 @@ use crate::{LedColor, LedFont};
 /// The Rust handle for the matrix canvas to draw on.
 ///
 /// ```
-/// use rpi_led_matrix::{LedMatrix, LedColor};
+/// use pi_led_matrix::{LedMatrix, LedColor};
 /// let matrix = LedMatrix::new(None, None).unwrap();
 /// let mut canvas = matrix.canvas();
 /// canvas.fill(&LedColor { red: 128, green: 128, blue: 128 });
