@@ -17,7 +17,7 @@ categories = ["embedded"]
 
 [dependencies]
 libc = "0.2"
-pi-led-matrix-sys = { version = "0.2", path = "../rpi-led-matrix-sys" }
+pi-led-matrix-sys = { version = "0.3", path = "../rpi-led-matrix-sys" }
 embedded-graphics-core = { version = "0.4", optional = true }
 clap = { version = "3.0", optional = true, features = ["cargo"] }
 
