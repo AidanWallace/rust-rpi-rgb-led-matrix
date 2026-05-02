@@ -23,11 +23,6 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-      - name: Show outputs
-        if: ${{ steps.release.outputs }}
-        run: |
-          echo "${{ toJson(steps.release.outputs) }}"
-
   publish-crates:
     runs-on: ubuntu-latest
     needs: release-please
