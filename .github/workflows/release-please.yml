@@ -25,6 +25,7 @@ jobs:
 
       - name: Show outputs
         if: ${{ steps.release.outputs }}
+        continue-on-error: true
         run: |
           echo "${{ toJson(steps.release.outputs) }}"
 
