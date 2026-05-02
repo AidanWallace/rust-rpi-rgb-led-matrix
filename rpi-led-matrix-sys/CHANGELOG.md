@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - While cross-compiling, pass the correct CC and CXX to the Makefile.
 
+## [0.4.0](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/compare/rpi-led-matrix-sys-v0.3.0...rpi-led-matrix-sys-v0.4.0) (2026-05-02)
+
+
+### Features
+
+* release ([ee36625](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/commit/ee36625ae24b3ff606b23cd369832936bb4105c7))
+
 ## [0.3.0](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/compare/rpi-led-matrix-sys-v0.2.1...rpi-led-matrix-sys-v0.3.0) (2026-05-02)
 
 
