@@ -17,7 +17,7 @@ impl LedMatrixOptions {
     /// Creates a new `LedMatrixOptions` struct with the default parameters.
     ///
     /// ```
-    /// use rpi_led_matrix::{LedMatrix,LedMatrixOptions};
+    /// use pi_led_matrix::{LedMatrix,LedMatrixOptions};
     /// let mut options = LedMatrixOptions::new();
     /// options.set_hardware_mapping("adafruit-hat-pwm");
     /// let matrix = LedMatrix::new(Some(options), None).unwrap();
@@ -264,7 +264,7 @@ impl LedRuntimeOptions {
     /// Creates a new `LedRuntimeOptions` struct with the default parameters.
     ///
     /// ```
-    /// use rpi_led_matrix::{LedMatrix, LedRuntimeOptions};
+    /// use pi_led_matrix::{LedMatrix, LedRuntimeOptions};
     /// let mut rt_options = LedRuntimeOptions::new();
     /// rt_options.set_gpio_slowdown(3);
     /// let matrix = LedMatrix::new(None, Some(rt_options)).unwrap();

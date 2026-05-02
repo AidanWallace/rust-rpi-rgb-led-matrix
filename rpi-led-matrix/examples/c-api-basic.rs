@@ -1,6 +1,6 @@
 /// Example showing some basic usage of the C++ library.
 use clap::{arg, crate_version, App};
-use rpi_led_matrix::{args, LedColor, LedMatrix};
+use pi_led_matrix::{args, LedColor, LedMatrix};
 
 const INTER_LINE_DELAY: std::time::Duration = std::time::Duration::from_millis(16 * 2);
 
