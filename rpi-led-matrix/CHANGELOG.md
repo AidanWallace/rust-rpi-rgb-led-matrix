@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.3](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/compare/pi-led-matrix-v0.5.2...pi-led-matrix-v0.5.3) (2026-05-02)
+
+
+### Bug Fixes
+
+* bump dependency version ([#11](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/issues/11)) ([25ca940](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/commit/25ca9404f7b9314a040b0721b24a98066cdca17d))
+
 ## [0.5.2](https://github.com/AidanWallace/rust-rpi-rgb-led-matrix/compare/pi-led-matrix-v0.5.1...pi-led-matrix-v0.5.2) (2026-05-02)
 
 
